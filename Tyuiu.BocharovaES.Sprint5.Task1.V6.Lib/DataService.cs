@@ -20,17 +20,8 @@ namespace Tyuiu.BocharovaES.Sprint5.Task1.V6.Lib
             string strY;
             for (int x =startValue; x <= stopValue; x++)
             {
-                
-                if (x==0)
-                {
-                    y = 0;
-                    strY = Convert.ToString(y);
-                }
-                else
-                {
-                    y = Math.Round((Math.Cos(x) + 4 * x / 2 - Math.Sin(x) * 3 * x),2);
-                    strY = Convert.ToString(y);
-                }
+                y = Math.Round((Math.Cos(x) + 4 * x / 2 - Math.Sin(x) * 3 * x), 2);
+                strY = Convert.ToString(y);
                 if (x != stopValue)
                 {
                     File.AppendAllText(path, strY + Environment.NewLine);
